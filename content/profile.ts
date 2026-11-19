@@ -1,14 +1,14 @@
 export const profile = {
   name: "Ibukun Aluko",
-  headline: "I build web and mobile products with AI built in, on Spring Boot backends I can trust.",
+  headline: "Senior software engineer: web and mobile products with AI built in, on Spring Boot backends I can trust.",
   location: "Abuja, Nigeria",
   availability: "Open to remote roles worldwide and to roles in Nigeria.",
   email: "aluko.ibkjsp@gmail.com",
   github: "", // owner to supply
   linkedin: "", // owner to supply
   education: [
-    { degree: "MSc Computer Science (Distinction)", school: "University of East London", dates: "2022 – 2023" },
-    { degree: "BSc Computer Science (First-Class Honours)", school: "Covenant University", dates: "2016 – 2020" },
+    { degree: "MSc Computer Science (Distinction)", school: "University of East London", dates: "2022 – 2023", note: "Final project: comparative analysis of pretrained deep learning models for disease prediction." },
+    { degree: "BSc Computer Science (First-Class Honours)", school: "Covenant University", dates: "2016 – 2020", note: "Final project: cloud-based task management system on Google Cloud, in Java and JavaScript." },
   ],
   publication: {
     title: "Performance Evaluation of Ensemble Deep Learning Algorithms for Prediction of Pandemic Disease",

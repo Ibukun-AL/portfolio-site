@@ -1,53 +1,54 @@
 import type { Role } from "./types";
 
-// Figures are copied from the owner's previous portfolio. The owner must confirm them before launch.
+// Source: the owner's CV (Ibukun_Aluko_Resume_.pdf). Percentages are the owner's own figures.
 export const experience: Role[] = [
   {
-    role: "Full-Stack Developer",
-    company: "Paymish",
-    dates: "Jan 2024 – Jun 2024",
+    role: "Senior Full Stack Developer",
+    company: "Blac Agency",
+    dates: "Jul 2025 – Present",
     location: "Abuja, Nigeria",
-    summary: "Payment processing applications.",
+    summary: "Design and development agency. Client-facing web applications.",
     outcomes: [
-      "Integrated third-party payment gateways through RESTful APIs, reducing payment processing time by 30%.",
-      "Built microservices with Spring Boot and Node.js, and tuned the database with caching and indexing to cut query response time.",
-      "Worked with designers to ship responsive interfaces in React and Tailwind CSS.",
+      "Built accessible interfaces with React, Next.js and Tailwind CSS, and deployed client-facing applications built for scale and responsiveness.",
+      "Engineered backend services in Java and Spring Boot, reducing API response times by approximately 40%.",
+      "Integrated AWS and Firebase for authentication, storage and hosting, and delivered custom CMS solutions with design and marketing teams.",
     ],
   },
   {
-    role: "Software Developer",
-    company: "Federal Polytechnic Ilaro",
-    dates: "Mar 2023 – Aug 2023",
-    location: "Nigeria",
-    summary: "A voting management system and an admin tracking system.",
+    role: "Senior Software Engineer",
+    company: "IP Labs LLC",
+    dates: "Jan 2024 – Jul 2025",
+    location: "Lewes, Delaware, USA (remote)",
+    summary: "Data collection and account automation.",
     outcomes: [
-      "Designed the REST APIs and secured them with JWT, OAuth 2.0 and data encryption.",
-      "Deployed on AWS and Google Cloud, and led CI/CD integration that reduced deployment failures by 40%.",
-      "Mentored interns in clean architecture and agile practice.",
+      "Built a modular YouTube scanner on the YouTube Data API that extracts URLs, titles, descriptions, publish dates, durations and metadata.",
+      "Built Facebook authentication workflows with phone-number prioritisation, 2FA and security-challenge handling, with graceful fallback modes.",
+      "Added duplicate detection, error handling for suspended and private accounts, and rate-limit protection, using Selenium automation where APIs ran out.",
+      "Mentored junior engineers.",
+    ],
+  },
+  {
+    role: "Full Stack Developer",
+    company: "The Ideas Impact Company",
+    dates: "Jan 2023 – Jan 2024",
+    location: "London, United Kingdom (remote)",
+    summary: "Backend lead on production platforms including Dimme and Rugby Player.",
+    outcomes: [
+      "Designed REST APIs in Node.js and TypeScript covering authentication, role-based authorisation, payments, notifications and core business workflows.",
+      "Modelled relational data in PostgreSQL with Prisma, with safe schema migrations.",
+      "Supported production deployments: debugging live issues, improving performance and maintaining environments, and contributed to CI/CD and release workflows.",
     ],
   },
   {
     role: "Software Engineer",
-    company: "Nigeria Deposit Insurance Corporation (NDIC)",
-    dates: "Mar 2022 – Feb 2023",
+    company: "Paymish",
+    dates: "Jan 2022 – Jan 2023",
     location: "Abuja, Nigeria",
-    summary: "Spring Boot microservices for a national financial institution.",
+    summary: "Fintech. Payment processing systems.",
     outcomes: [
-      "Built Spring Boot microservices that improved system scalability by 30%.",
-      "Optimised queries across MySQL, PostgreSQL and MongoDB, reducing response time by 20%.",
-      "Containerised services with Docker and Kubernetes for a 50% improvement in deployment efficiency, and cut deployment time by 40% with CI/CD.",
-      "Hardened APIs with OAuth, JWT and role-based access control.",
-    ],
-  },
-  {
-    role: "Software Developer Intern",
-    company: "HIIT PLC",
-    dates: "Apr 2020 – Jan 2021",
-    location: "Abuja, Nigeria",
-    summary: "Legacy code refactoring and API testing.",
-    outcomes: [
-      "Refactored legacy code to reduce application response time by 30%.",
-      "Raised test coverage by 25% with JUnit, Jest and Cypress.",
+      "Integrated RESTful APIs and third-party payment gateways, reducing transaction-processing time by approximately 30%.",
+      "Built microservices with Spring Boot and Node.js, and tuned the database with indexing and caching.",
+      "Shipped responsive interfaces in React and Tailwind CSS with UI/UX designers.",
     ],
   },
 ];

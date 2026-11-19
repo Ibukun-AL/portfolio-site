@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="160" viewBox="0 0 240 160">
+  <defs>
+    <linearGradient id="rib" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0" stop-color="#000" stop-opacity=".28"/>
+      <stop offset=".25" stop-color="#000" stop-opacity=".06"/>
+      <stop offset=".6" stop-color="#fff" stop-opacity=".1"/>
+      <stop offset="1" stop-color="#000" stop-opacity=".22"/>
+    </linearGradient>
+    <pattern id="ribs" width="15" height="160" patternUnits="userSpaceOnUse"><rect width="15" height="160" fill="url(#rib)"/></pattern>
+    <filter id="wear" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency=".012 .35" numOctaves="3" seed="7"/>
+      <feColorMatrix values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 .22 -.07"/>
+    </filter>
+  </defs>
+  <rect width="240" height="160" fill="url(#ribs)"/>
+  <rect width="240" height="160" filter="url(#wear)"/>
+  <rect y="0" width="240" height="5" fill="#000" opacity=".25"/>
+  <rect y="155" width="240" height="5" fill="#000" opacity=".3"/>
+</svg>

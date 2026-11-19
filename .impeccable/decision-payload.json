@@ -1,0 +1,94 @@
+{
+  "title": "Choose the visual world for Ibukun's portfolio",
+  "question": "The roll assigned The Postal Sheet. Keep it, take an alternate, or re-roll.",
+  "options": [
+    {
+      "id": "assigned", "kind": "assigned", "label": "The Postal Sheet", "kicker": "THE ROLL",
+      "lineage": "airmail stamp sheets, franked and postmarked",
+      "thesis": "Every project is a stamp on one sheet, and the whole page is mail that arrived.",
+      "palette": ["#dce8f5", "#0f1e3d", "#d8302b", "#1d3fa8"],
+      "materials": ["perforated paper", "rubber-stamp ink", "airmail border"],
+      "viewport": "A perforated sheet of project stamps with a DELIVERED postmark, the headline and a red stamp-shaped Email me beside it.",
+      "risk": "Reads as novelty if the perforation and postmark are overdone.",
+      "raised": [
+        {"from": "Green-phosphor terminal", "raise": "Every stamp locks to one strict perforation grid, so the sheet scans like a table."},
+        {"from": "Constructivist agit-train", "raise": "The Email me stamp physically overlaps the sheet edge, so the action enters the composition."}
+      ],
+      "html": ".impeccable/mocks/decision/assigned.html"
+    },
+    {
+      "id": "model-pick", "kind": "pick", "label": "The Bill of Lading", "kicker": "IMPECCABLE’S PICK",
+      "lineage": "freight manifests and shipping container yards",
+      "thesis": "You are the shipper; each project is a numbered container with its paperwork.",
+      "palette": ["#d9d4c7", "#1a1a1a", "#e2541b", "#1d4d5c"],
+      "materials": ["corrugated steel colour", "stencil numerals", "carbon-copy form"],
+      "viewport": "Giant stencilled headline over a row of four container blocks with a manifest form beside it.",
+      "risk": "The shipping pun is the most literal reading of ships end to end.",
+      "html": ".impeccable/mocks/decision/pick.html"
+    },
+    {
+      "id": "challenger-terminal", "kind": "challenger", "catalogId": "signals-instruments-phosphor-terminal-midnight",
+      "label": "Phosphor Terminal", "verdict": "competitive",
+      "lineage": "green-phosphor machine-room terminals",
+      "thesis": "The portfolio as a live transcript on glass.",
+      "palette": ["#060a06", "#47ff7a", "#1f8a3e"],
+      "materials": ["curved glass", "phosphor bloom", "bitmap mono"],
+      "viewport": "A command transcript that lists the work as directory entries.",
+      "case": "Engineers recognise it instantly, but its one monospaced field is slower to scan than the Postal Sheet.",
+      "risk": "The developer-portfolio cliché, and long text is tiring in green mono.",
+      "html": ".impeccable/mocks/decision/terminal.html"
+    },
+    {
+      "id": "challenger-train", "kind": "challenger", "catalogId": "design-canon-constructivist-agit-train",
+      "label": "Agit-Train", "verdict": "competitive",
+      "lineage": "Constructivist agitprop railcars",
+      "thesis": "Projects as railcars driven along one red diagonal.",
+      "palette": ["#efe8d8", "#141414", "#d62718"],
+      "materials": ["newsprint", "stencil wood type", "red wedge"],
+      "viewport": "A red wedge carries the headline over three railcars, with a clipped Email me wedge.",
+      "case": "Boldest and clearest call to action, but the political register is a stretch for a hiring site.",
+      "risk": "Angled type can hurt readability for recruiters skimming.",
+      "html": ".impeccable/mocks/decision/train.html"
+    },
+    {
+      "id": "challenger-quilt", "kind": "challenger", "catalogId": "textiles-weave-drape-fashion-memory-quilt-atlas",
+      "label": "Memory Quilt", "verdict": "declined", "lineage": "hand-pieced garment quilts",
+      "palette": ["#7f9bb8", "#1b1b1f", "#c8342b"], "materials": ["worn cloth", "stitch rule"],
+      "case": "Fuses poorly: recruiters do not identify with domestic memory objects.",
+      "kept": "Every block carries its own date and provenance."
+    },
+    {
+      "id": "challenger-disk", "kind": "challenger", "catalogId": "galaxies-nebulae-deep-time-accretion-disk-threshold",
+      "label": "Accretion Disk", "verdict": "declined", "lineage": "black-hole accretion imagery",
+      "palette": ["#05060a", "#9fc4ff", "#e0a63a"], "materials": ["void black", "shader light"],
+      "case": "Fuses poorly: an astrophysics spectacle hides the experience a recruiter came to read.",
+      "kept": "Total commitment to one dark ground."
+    },
+    {
+      "id": "challenger-room", "kind": "challenger", "catalogId": "cyworld-minihompy-room",
+      "label": "Minihompy Room", "verdict": "declined", "lineage": "Cyworld mini-rooms",
+      "palette": ["#f6d6e4", "#bfe3f2", "#f3e6a8"], "materials": ["pastel isometric", "sticker outlines"],
+      "case": "Fuses poorly: a decorated room signals play, not hiring-grade reliability.",
+      "kept": "Small honest counters as real chrome."
+    },
+    {
+      "id": "challenger-tanaka", "kind": "challenger", "catalogId": "tanaka-plane-portrait",
+      "label": "Plane Portrait", "verdict": "declined", "lineage": "Ikko Tanaka posters",
+      "palette": ["#f1ede4", "#e2441f", "#23306b"], "materials": ["flat planes", "quiet grid"],
+      "case": "Fuses poorly: it needs a portrait and a figure, and the site has neither.",
+      "kept": "Total commitment to a small set of flat colours."
+    }
+  ],
+  "reroll": { "registers": ["safer", "bolder"] },
+  "buildPath": { "value": "code" },
+  "canon": true,
+  "canonCard": {
+    "kind": "canon", "label": "The category standard",
+    "thesis": "A clean developer portfolio executed with full craft.",
+    "palette": ["#ffffff", "#111827", "#2563eb"], "materials": ["clean grid", "project cards"],
+    "viewport": "Name and one line at left, a grid of three project cards below.",
+    "risk": "Indistinguishable from other developer portfolios by design.",
+    "wireframe": {"cols": 12, "rows": 10, "regions": [{"label": "name and headline", "x": 0, "y": 1, "w": 7, "h": 3}, {"label": "Email me", "x": 0, "y": 5, "w": 2, "h": 1, "accent": true}, {"label": "project card", "x": 0, "y": 7, "w": 4, "h": 3}, {"label": "project card", "x": 4, "y": 7, "w": 4, "h": 3}, {"label": "project card", "x": 8, "y": 7, "w": 4, "h": 3}]}
+  },
+  "steer": true
+}

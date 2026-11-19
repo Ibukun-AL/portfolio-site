@@ -1,0 +1,238 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-19T11:31:10.717248+00:00",
+  "title": "Design System: Ibukun Aluko, hiring portfolio",
+  "extensions": {
+    "colorMeta": {
+      "dock-grey": {
+        "role": "neutral",
+        "displayName": "Dock Grey",
+        "canonical": "#cfd2cf"
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "canonical": "#14181b"
+      },
+      "ink-soft": {
+        "role": "neutral",
+        "displayName": "Soft Ink",
+        "canonical": "#4a5258"
+      },
+      "form-paper": {
+        "role": "neutral",
+        "displayName": "Form Paper",
+        "canonical": "#ededE6"
+      },
+      "container-teal": {
+        "role": "secondary",
+        "displayName": "Deep Teal",
+        "canonical": "#1f5560"
+      },
+      "container-oxide": {
+        "role": "secondary",
+        "displayName": "Oxide Brown",
+        "canonical": "#8a4a2b"
+      },
+      "container-slate": {
+        "role": "secondary",
+        "displayName": "Slate",
+        "canonical": "#39434b"
+      },
+      "container-khaki": {
+        "role": "secondary",
+        "displayName": "Khaki",
+        "canonical": "#8c8564"
+      },
+      "hi-vis": {
+        "role": "primary",
+        "displayName": "Hi-Vis Yellow",
+        "canonical": "#ffd200"
+      },
+      "hi-vis-hover": {
+        "role": "primary",
+        "displayName": "Hi-Vis Hover",
+        "canonical": "#ffe04d"
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Hero H1 only."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section titles in container headers."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Project slip, ledger and bill titles."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Prose on paper or dock."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "CTA, form labels, plates, stage keys."
+      },
+      "stencil-id": {
+        "displayName": "Stencil ID",
+        "purpose": "Container IDs only."
+      },
+      "mono": {
+        "displayName": "Mono",
+        "purpose": "Dates, stack lines, route steps."
+      }
+    },
+    "shadows": [
+      {
+        "name": "slip",
+        "value": "0 22px 34px -22px rgba(20,24,27,0.55)",
+        "purpose": "Paper slips."
+      },
+      {
+        "name": "bill",
+        "value": "0 24px 40px -22px rgba(20,24,27,0.55)",
+        "purpose": "Hero bill and contact form."
+      },
+      {
+        "name": "yard",
+        "value": "0 28px 36px -22px rgba(20,24,27,0.6)",
+        "purpose": "Hero containers."
+      },
+      {
+        "name": "loaded",
+        "value": "0 40px 40px -22px rgba(20,24,27,0.7), 0 0 0 4px #cfd2cf, 0 0 0 7px #14181b",
+        "purpose": "The container currently on the bill."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-out-expo",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Container drop, stage entry, lift."
+      },
+      {
+        "name": "drop",
+        "value": "0.9s, 90ms stagger",
+        "purpose": "Yard containers on load."
+      },
+      {
+        "name": "stage-in",
+        "value": "0.4s, 60ms stagger",
+        "purpose": "Bill stages after loading a project."
+      },
+      {
+        "name": "motion-switch",
+        "value": "html[data-motion=off] disables animation, transition, smooth scroll; localStorage ia-motion",
+        "purpose": "User control; defaults from prefers-reduced-motion."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "narrow",
+        "value": "860px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "CTA Button",
+      "kind": "button",
+      "refersTo": "button-cta",
+      "description": "Hi-vis yellow action; Email me and Send message only.",
+      "html": "<a class=\"ds-cta\" href=\"#\">Email me</a>",
+      "css": ".ds-cta{display:inline-flex;align-items:center;justify-content:center;min-height:3.5rem;padding:0 2.2rem;background:#ffd200;color:#14181b;font:700 1.0625rem Barlow,system-ui,sans-serif;text-transform:uppercase;letter-spacing:.06em;text-decoration:none;border:2px solid #14181b;cursor:pointer;transition:background .15s,transform .15s}.ds-cta:hover{background:#ffe04d;transform:translateY(-2px)}.ds-cta:focus-visible{outline:3px solid #14181b;outline-offset:3px}"
+    },
+    {
+      "name": "Skill Chip",
+      "kind": "chip",
+      "refersTo": "chip",
+      "description": "Toggle chip; pressed inverts to ink.",
+      "html": "<button class=\"ds-chip\" aria-pressed=\"false\">Spring Boot</button> <button class=\"ds-chip\" aria-pressed=\"true\">Next.js</button>",
+      "css": ".ds-chip{margin:0 .5rem .5rem 0;padding:.3rem .8rem;border:2px solid #14181b;background:#ededE6;color:#14181b;font:600 .9375rem Barlow,system-ui,sans-serif;cursor:pointer;transition:background .15s,color .15s}.ds-chip:hover{background:#cfd2cf}.ds-chip[aria-pressed=true]{background:#14181b;color:#ededE6}.ds-chip:focus-visible{outline:3px solid #14181b;outline-offset:3px}"
+    },
+    {
+      "name": "Container",
+      "kind": "custom",
+      "refersTo": "container-teal",
+      "description": "Corrugated container with stencil ID on the door end.",
+      "html": "<div class=\"ds-box\"><span class=\"ds-door\"><span class=\"ds-id\">IBKA 410027 4</span></span><div class=\"ds-body\">Document Q&amp;A</div></div>",
+      "css": ".ds-box{display:flex;min-height:8rem;background-color:#1f5560;color:#fff;border:2px solid #14181b;overflow:hidden;background-image:url(/container-side.svg);background-size:240px 100%;background-repeat:repeat-x}.ds-door{flex:0 0 4.25rem;display:grid;place-items:center;background:rgba(0,0,0,.3);border-right:2px solid #14181b}.ds-id{writing-mode:vertical-rl;transform:rotate(180deg);font:700 1.05rem 'Big Shoulders Stencil',sans-serif;letter-spacing:.1em;white-space:nowrap}.ds-body{flex:1;padding:1.4rem 1.6rem;font:800 1.5rem 'Big Shoulders Display',sans-serif;text-transform:uppercase;align-self:flex-end}"
+    },
+    {
+      "name": "Bill of Lading",
+      "kind": "card",
+      "refersTo": "slip",
+      "description": "Form-paper slip with ID header and four stages.",
+      "html": "<aside class=\"ds-bill\"><div class=\"ds-head\"><h2>Bill of lading</h2><span>IBKA 410027 4</span></div><ol><li><b>Brief</b><span>The problem.</span></li><li><b>Build</b><span>What shipped.</span></li><li><b>Test</b><span>How it was checked.</span></li><li><b>Ship</b><span>Where it runs.</span></li></ol></aside>",
+      "css": ".ds-bill{background:#ededE6;border:2px solid #14181b;padding:1.3rem 1.5rem;box-shadow:0 24px 40px -22px rgba(20,24,27,.55);color:#14181b;font-family:Barlow,sans-serif}.ds-head{display:flex;justify-content:space-between;align-items:baseline;border-bottom:2px solid #14181b;padding-bottom:.4rem}.ds-head h2{font:800 1.5rem 'Big Shoulders Display',sans-serif;text-transform:uppercase}.ds-head span{font:700 .9rem 'Big Shoulders Stencil',sans-serif;letter-spacing:.1em}.ds-bill ol{list-style:none;margin:.4rem 0 0;padding:0}.ds-bill li{display:grid;grid-template-columns:4.2rem 1fr;gap:.75rem;padding:.55rem 0;border-bottom:1px dashed #4a5258;font-size:.9375rem}.ds-bill li b{font-size:.75rem;text-transform:uppercase;letter-spacing:.1em;color:#4a5258}"
+    },
+    {
+      "name": "Nav Bar",
+      "kind": "nav",
+      "refersTo": "nav",
+      "description": "Sticky dock bar with hazard-stripe edge.",
+      "html": "<header class=\"ds-bar\"><span class=\"ds-brand\">Ibukun Aluko</span><nav><a href=\"#\">Work</a><a href=\"#\">Skills</a><a href=\"#\">Contact</a></nav></header>",
+      "css": ".ds-bar{position:relative;display:flex;align-items:center;gap:2rem;padding:.9rem 1.5rem;background:#cfd2cf;border-bottom:2px solid #14181b;margin-bottom:16px}.ds-bar::after{content:'';position:absolute;left:0;right:0;bottom:-12px;height:10px;background:repeating-linear-gradient(135deg,#14181b 0 10px,#cfd2cf 10px 20px)}.ds-brand{font:800 1.6rem 'Big Shoulders Display',sans-serif;text-transform:uppercase;letter-spacing:.02em}.ds-bar nav{display:flex;gap:1.75rem;margin-left:auto;font:600 1rem Barlow,sans-serif}.ds-bar nav a{color:#14181b;text-decoration:none;border-bottom:2px solid transparent}.ds-bar nav a:hover{border-color:#14181b}"
+    },
+    {
+      "name": "Motion Switch",
+      "kind": "custom",
+      "refersTo": "chip",
+      "description": "Outlined ink toggle; localStorage ia-motion.",
+      "html": "<button class=\"ds-motion\"><span></span>Motion on</button>",
+      "css": ".ds-motion{display:inline-flex;align-items:center;gap:.5rem;background:none;border:2px solid #14181b;padding:.3rem .7rem;font:600 .8125rem Barlow,sans-serif;text-transform:uppercase;letter-spacing:.06em;color:#14181b;cursor:pointer}.ds-motion span{width:.7rem;height:.7rem;background:#14181b}.ds-motion:focus-visible{outline:3px solid #14181b;outline-offset:3px}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Bill of Lading",
+    "overview": "The page is a shipping document. Ibukun is the shipper; each project is a numbered container with its paperwork on a form-paper slip. Dock concrete ground, corrugated muted containers, one hi-vis highlighter for clickable actions. Square corners, 2px ink rules, hazard-stripe edges, soft long shadows.",
+    "keyCharacteristics": [
+      "Dock-grey ground, ink rules, form paper for reading surfaces",
+      "Four corrugated container tones with stencilled IDs",
+      "Hazard-stripe edge under the bar and above contact",
+      "One highlighter: hi-vis yellow on clickable CTAs only",
+      "Interactive yard, skill chips, motion switch"
+    ],
+    "rules": [
+      {
+        "name": "The One Highlighter Rule",
+        "body": "Yellow marks a clickable call to action and nothing else. Containers use oxide and khaki, never orange or mustard.",
+        "section": "colors"
+      },
+      {
+        "name": "The Paper-for-Reading Rule",
+        "body": "Long text sits on form paper or dock grey in ink; container paints carry only short stencilled labels and titles.",
+        "section": "colors"
+      },
+      {
+        "name": "The Rationed Mono Rule",
+        "body": "Mono and stencil faces appear only on container IDs, dates, stack lines and route steps, never on body copy.",
+        "section": "typography"
+      },
+      {
+        "name": "The Lift-Means-Loaded Rule",
+        "body": "A container rises only to signal it is the one on the bill.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do reserve #ffd200 for clickable calls to action (Email me, Send message).",
+      "Do outline every object in 2px ink and keep corners square.",
+      "Do put reading text on form paper (#ededE6) or dock grey.",
+      "Do give every container a stencilled IBKA ID and keep container text high-contrast: white on teal, oxide, slate; ink on khaki.",
+      "Do respect data-motion=\"off\" for any new animation or transition.",
+      "Do style by class; CSS modules scope class names."
+    ],
+    "donts": [
+      "Don't use yellow for decoration, headings, badges or non-clickable emphasis.",
+      "Don't introduce orange, mustard or additional container colours that compete with yellow.",
+      "Don't fall back to the name, tagline and card-grid portfolio layout.",
+      "Don't round corners or add blur, gradients as fills, or hard offset shadows.",
+      "Don't use mono or stencil faces for body copy.",
+      "Don't target ids from the CSS module (see caveats); use classes."
+    ]
+  }
+}
