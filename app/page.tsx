@@ -49,8 +49,9 @@ export default function Home() {
       <main id="top">
         <section className={s.dock} aria-labelledby="h1">
           <div className={s.dockCopy}>
-            <h1 id="h1">Shipped end to end.</h1>
-            <p className={s.lede}>Senior engineer, five years across fintech, SaaS and agencies. Web and mobile products with AI built in, on Spring Boot backends I can trust. Abuja, Nigeria, open to remote roles worldwide and in Nigeria.</p>
+            <p className={s.kicker}>Shipped end to end</p>
+            <h1 id="h1">Senior <span className={s.keep}>full-stack</span> engineer.</h1>
+            <p className={s.lede}>Five years across fintech, SaaS and agencies. Web and mobile products with AI built in, on Spring Boot backends I can trust. Abuja, Nigeria, open to remote roles worldwide and in Nigeria.</p>
             <a className={s.cta} href={`mailto:${profile.email}`}>Email me</a>
           </div>
           <Yard work={work} />
@@ -72,7 +73,7 @@ export default function Home() {
                     {w.codeUrl && <a href={w.codeUrl}>Code</a>}
                   </p>
                 </div>
-                <figure className={s.shot}><Image src={w.image.src} alt={w.image.alt} width={w.image.w} height={w.image.h} sizes="(max-width: 860px) 100vw, 480px" /><figcaption>Screenshot of the running project</figcaption></figure>
+                <figure className={s.shot}><Image src={w.image.src} alt={w.image.alt} width={w.image.w} height={w.image.h} sizes="(max-width: 860px) 100vw, 480px" /></figure>
                 </div>
               </li>
             ))}

@@ -33,7 +33,7 @@ export default async function Case({ params }: { params: Promise<{ slug: string 
           <p className={s.plate}>{w.note}</p>
         </Container>
         <p className={s.lede}>{w.pitch}</p>
-        <figure className={`${s.shot} ${s.caseShot}`}><Image src={w.image.src} alt={w.image.alt} width={w.image.w} height={w.image.h} sizes="(max-width: 860px) 100vw, 832px" priority /><figcaption>Screenshot of the running project</figcaption></figure>
+        <figure className={`${s.shot} ${s.caseShot}`}><Image src={w.image.src} alt={w.image.alt} width={w.image.w} height={w.image.h} sizes="(max-width: 860px) 100vw, 832px" priority /></figure>
         <ol className={`${s.stages} ${s.caseStages}`}>{w.stages.map(([k, v]) => <li key={k}><span className={s.stageK}>{k}</span><span>{v}</span></li>)}</ol>
         <p className={s.stackLine}>{w.stack.join(" · ")}</p>
         <ul className={s.bullets}>{w.points.map((p) => <li key={p}>{p}</li>)}</ul>

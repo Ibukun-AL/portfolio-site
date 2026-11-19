@@ -2,6 +2,7 @@
   --dock: #cfd2cf; --ink: #14181b; --form: #ededE6; --ink-soft: #4a5258;
   --teal: #1f5560; --oxide: #8a4a2b; --slate: #39434b; --khaki: #8c8564;
   --hivis: #ffd200; --hivis-hover: #ffe04d;
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
 }
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; scrollbar-color: var(--ink) var(--dock); }
