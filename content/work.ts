@@ -1,20 +1,20 @@
 import type { Work } from "./types";
 
-// demoUrl and codeUrl are filled in once each project is deployed and pushed.
+// Live demos are on Vercel; code is in the matching GitHub repos.
 export const work: Work[] = [
   {
     slug: "document-qa",
     title: "Document Q&A assistant",
     pitch: "Ask a question about a PDF and get an answer that cites the page it came from.",
     stack: ["Next.js", "TypeScript", "Gemini API", "Vitest"],
-    demoUrl: "",
-    codeUrl: "",
+    demoUrl: "https://document-qa-chi.vercel.app",
+    codeUrl: "https://github.com/Ibukun-AL/document-qa",
     note: "Personal project",
     stages: [
       ["Brief", "Answer questions about a PDF without making things up."],
       ["Build", "Per-page text, chunking, BM25-style retrieval, answers drawn only from the excerpts."],
       ["Test", "10 passing Vitest tests."],
-      ["Ship", "Rate-limited and size-capped. Live demo deploying soon."],
+      ["Ship", "Rate-limited and size-capped. Live on Vercel."],
     ],
     image: { src: "/work/document-qa-v2.png", alt: "Screenshot of the Document Q&A app showing the sample Northwind policy as four page cards, a question box and three example questions.", w: 880, h: 620 },
     points: [
@@ -28,14 +28,14 @@ export const work: Work[] = [
     title: "Receipt scanner and expense tracker",
     pitch: "Photograph a receipt, check the extracted merchant, date and total, and see monthly spending by category.",
     stack: ["React Native", "Expo", "TypeScript", "Gemini vision API"],
-    demoUrl: "",
-    codeUrl: "",
+    demoUrl: "https://receipt-tracker-inky.vercel.app",
+    codeUrl: "https://github.com/Ibukun-AL/receipt-tracker",
     note: "Personal project",
     stages: [
       ["Brief", "Turn a receipt photo into a categorised expense."],
       ["Build", "Expo app, server-side vision reading, review and edit before saving."],
       ["Test", "12 passing Vitest tests on categorising and summing."],
-      ["Ship", "Web preview builds. Device build to follow."],
+      ["Ship", "Live web build on Vercel. Device build to follow."],
     ],
     image: { src: "/work/receipt-tracker-v2.png", alt: "Screenshot of the Receipts app on a phone-width screen showing the monthly spending total, category colours and the Scan receipt and Choose photo buttons.", w: 390, h: 420 },
     points: [
@@ -49,14 +49,14 @@ export const work: Work[] = [
     title: "Disease risk prediction app",
     pitch: "A model trained in Python on a public dataset, served from a Next.js API, and checked against scikit-learn's own answers.",
     stack: ["Next.js", "TypeScript", "Python", "scikit-learn", "Vitest", "GitHub Actions"],
-    demoUrl: "",
-    codeUrl: "",
+    demoUrl: "https://disease-risk-prediction-psi.vercel.app",
+    codeUrl: "https://github.com/Ibukun-AL/disease-risk-prediction",
     note: "Personal project. Public dataset, not medical advice.",
     stages: [
       ["Brief", "Take a Python-trained model to production without running Python there."],
       ["Build", "Train and export in Python; the same scaling and sigmoid in TypeScript behind an API route and a form."],
       ["Test", "9 passing tests, including a check that the TypeScript scores match scikit-learn's to 9 decimals. 96.5% held-out accuracy."],
-      ["Ship", "CI trains, tests, lints and builds on every push."],
+      ["Ship", "Live on Vercel. CI trains, tests, lints and builds on every push."],
     ],
     image: { src: "/work/risk-service-v3.png", alt: "Screenshot of the disease risk prediction app with the higher-risk example loaded across 30 measurement fields and a 100.0% model risk score.", w: 880, h: 678 },
     points: [
