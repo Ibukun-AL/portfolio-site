@@ -122,10 +122,17 @@ export default function Home() {
           <h3 className={s.small}>Smaller builds</h3>
           <ul className={s.minis}>
             {smallBuilds.map((b, i) => (
-              <Container as="li" key={b.name} id={`IBKA 41${i}0 0`} tone={MINI[i % 4]} len={20} className={s.mini}>
-                <p className={s.miniName}>{b.name}</p>
-                <p className={s.miniNote}>{b.note}</p>
-              </Container>
+              <li key={b.name} className={s.mini}>
+                <Container id={`IBKA 41${i}0 0`} tone={MINI[i % 4]} len={20} className={s.miniBox}>
+                  <p className={s.miniName}>{b.name}</p>
+                  <p className={s.miniNote}>{b.note}</p>
+                </Container>
+                <Image className={s.miniShot} src={b.image} alt={b.alt} width={800} height={500} sizes="(max-width: 860px) 50vw, 300px" />
+                <p className={s.miniLinks}>
+                  <a href={b.demo}>Live demo</a>
+                  <a href={b.code}>Code</a>
+                </p>
+              </li>
             ))}
           </ul>
         </section>
