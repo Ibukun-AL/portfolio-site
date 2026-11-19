@@ -146,11 +146,35 @@
 .caseNext .cta { margin-top: 0; }
 .textLink { font-weight: 700; }
 
+/* Scroll motion. Each effect has a job: depth in the hero, cargo arriving as you reach it,
+   container texture sliding so the bands read as moving steel. CSS-only; the Motion switch
+   (data-motion="off") and reduced-motion default switch all of it off. Uses the individual
+   `translate` property so it never fights the rotate and lift transforms. */
+@supports (animation-timeline: view()) {
+  .dockCopy { animation: pxCopy linear both; animation-timeline: scroll(root); animation-range: 0 80vh; }
+  .bill { animation: pxBill linear both; animation-timeline: scroll(root); animation-range: 0 80vh; }
+  .yard { animation: pxYard linear both; animation-timeline: scroll(root); animation-range: 0 80vh; }
+  .slip, .ledger > li, .paper, .mini, .form, .caseShot, .caseStages, .usedIn { animation: rise linear both; animation-timeline: view(); animation-range: entry 0% cover 26%; }
+  .head { animation: load linear both; animation-timeline: view(); animation-range: entry 0% cover 30%; }
+  .slipBand { animation: steel linear both; animation-timeline: view(); animation-range: cover 0% cover 100%; }
+  .shot img { animation: windowShift linear both; animation-timeline: view(); animation-range: cover 0% cover 100%; }
+  .port::before { animation: stripes linear both; animation-timeline: view(); animation-range: cover 0% cover 100%; }
+  @keyframes pxCopy { to { translate: 0 90px; } }
+  @keyframes pxBill { to { translate: 0 45px; } }
+  @keyframes pxYard { to { translate: 0 -34px; } }
+  @keyframes rise { from { opacity: 0; translate: 0 44px; } to { opacity: 1; translate: 0 0; } }
+  @keyframes load { from { opacity: 0; translate: -4rem 0; } to { opacity: 1; translate: 0 0; } }
+  @keyframes steel { from { background-position-x: 0; } to { background-position-x: -360px; } }
+  @keyframes windowShift { from { translate: 0 16px; } to { translate: 0 -16px; } }
+  @keyframes stripes { from { background-position-x: 0; } to { background-position-x: 120px; } }
+}
+
 @media (max-width: 860px) {
   .bar { flex-wrap: wrap; gap: 0.6rem 1rem; }
   .nav { order: 3; width: 100%; margin: 0; gap: 1.25rem; font-size: 0.9375rem; overflow-x: auto; }
   .motion { margin-left: auto; }
   .dock { grid-template-columns: 1fr; padding-top: 2.5rem; min-height: 0; }
+  .dockCopy, .bill, .yard { animation: none; }
   .bill { transform: none; min-height: 0; order: 2; }
   .yard { order: 1; margin-bottom: 0; }
   .papers { grid-template-columns: 1fr 1fr; } .minis { grid-template-columns: 1fr 1fr; }
